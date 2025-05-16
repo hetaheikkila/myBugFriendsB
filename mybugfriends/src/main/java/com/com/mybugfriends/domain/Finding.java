@@ -17,8 +17,8 @@ public class Finding {
     private Bug bug;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JoinColumn(name = "u_id")
+    private Appuser appuser;
 
     @Column(name = "location")
     private String location;
@@ -33,9 +33,9 @@ public class Finding {
     public Finding() {
     }
 
-    public Finding(Bug bug, User user, String location, LocalDateTime foundAt, String notes) {
+    public Finding(Bug bug, Appuser appuser, String location, LocalDateTime foundAt, String notes) {
         this.bug = bug;
-        this.user = user;
+        this.appuser = appuser;
         this.location = location;
         this.foundAt = foundAt;
         this.notes = notes;
@@ -59,11 +59,11 @@ public class Finding {
         this.bug = bug;
     }
 
-    public User getUser() {
-        return user;
+    public Appuser getUser() {
+        return appuser;
     }
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Appuser appuser) {
+        this.appuser = appuser;
     }
 
     public String getLocation() {
@@ -95,7 +95,7 @@ public class Finding {
         return "Finding{" +
                 "findingId=" + findingId +
                 ", bug=" + bug +
-                ", user=" + user +
+                ", appuser=" + appuser +
                 ", location='" + location + '\'' +
                 ", foundAt=" + foundAt +
                 ", notes='" + notes + '\'' +

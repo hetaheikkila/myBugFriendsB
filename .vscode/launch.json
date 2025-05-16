@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MybugfriendsApplication<mybugfriends>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.com.mybugfriends.MybugfriendsApplication",
+            "projectName": "mybugfriends",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
